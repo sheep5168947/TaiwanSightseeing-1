@@ -1,0 +1,118 @@
+html {
+    width: 100vw;
+}
+
+body {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    background: url(./images/background.jpg) center center fixed no-repeat;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.modal {
+    position: absolute;
+    left: 0;
+    border-radius: 40px;
+    box-sizing: border-box;
+    margin: 5vh 5vw;
+    padding: 5vw;
+    width: 90vw;
+    height: 90vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 1.5em;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.modal .topbar {
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    top: 10%;
+    width: 80vw;
+    height: fit-content;
+}
+
+#close {
+    display: inline-flex;
+    justify-content: center;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    border: 1px solid black;
+    color:white;
+    background: red;
+}
+
+.modal #part1 , .modal #part2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width:100%;
+    margin-top:10px;
+    height: fit-content;
+}
+
+
+.modal img {
+    width: 50%;
+    height:50%;
+    margin:10px;
+}
+
+.modal .text {
+    margin:10px;
+}
+
+@media (max-width:800px){
+    .modal img {
+        margin:0;
+        float: none;
+        width: 100%;
+    }
+}
+
+svg {
+    display: inline-block;
+    width: fit-content;
+    height: 100%;
+}
+
+svg path {
+    stroke: rgb(0, 0, 0);
+    fill: green;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+svg path:hover {
+    fill: #DAA520;
+    transform: translate(-5px, -5px);
+}
