@@ -193,6 +193,13 @@ article #form {
     flex-flow: column wrap;
 }
 
+img#image {
+    margin:auto;
+    object-fit: cover;
+    height: 30vw;
+    width: 40vw;
+}
+
 @media (max-width:800px) {
     nav a {
         display: none;
