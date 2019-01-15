@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="./stylesheets/fruit.css">
+	<link rel="stylesheet" href="./stylesheets/upload.css">
 	<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
 	<script>
 		// Initialize Firebase
@@ -22,6 +22,7 @@
 		var db = firebase.database()
 	</script>
 	<script src="./javascripts/nav.js" defer></script>
+	<script src="./javascripts/upload.js" defer></script>
 	<title>台灣景點介紹</title>
 </head>
 
@@ -60,9 +61,16 @@
 		<a href="./comment.html">留言板</a>
 	</div>
 	<article>
-		<script src="./javascripts/fruit.js"></script>
+    <h1>上傳您的商品</h1>
+    <form>
+      <img src="https://fakeimg.pl/200x100/?retina=1&text=上傳您的圖片&font=noto" alt="">
+      <input type="file" name="image" id="image">
+      <input type="text" name="title" id="title">
+      <input type="text" name="origin" id="price">
+      <input type="number" name="price" id="price">
+      <input type="text" name="report" id="report">
+    </form>
 	</article>
-	<a href="./upload.html"><img id="upload" src="https://www.shareicon.net/data/128x128/2016/09/29/837309_arrow_512x512.png" alt=""></a>
 </body>
 
 </html>

@@ -1,0 +1,231 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+body {
+    background: url(../images/background.jpg) center center fixed no-repeat;
+    background-size: cover;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-back {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    border-radius: 40px;
+    margin: 15vh 2.5%;
+    padding: 5%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70vh;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 1.5em;
+}
+
+#close {
+    display: inline-flex;
+    position: fixed;
+    top: 4vw;
+    right: 4vw;
+    justify-content: center;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 7.5px;
+    color: white;
+    background: rgba(255, 0, 0, 75);
+    border: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.modal .article {
+    display: flex;
+    align-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    height: fit-content;
+}
+
+.modal img {
+    width: 40%;
+    height: 40%;
+    margin: 10px;
+}
+
+.modal .text {
+    margin: 10px;
+}
+
+@media (max-width:800px) {
+    .modal img {
+        margin: 0;
+        float: none;
+        width: 100%;
+    }
+
+    .article {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        display: none;
+    }
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    justify-content: space-between;
+    background: black;
+}
+
+nav #logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 5em;
+    height: 10vh;
+    margin: 0 1vw;
+    font-size: 1.5em;
+    color: gold;
+}
+
+nav a,
+#menu a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 5em;
+    height: 4vh;
+    text-align: center;
+    margin: 2vh;
+    padding: 1vh;
+    background: gold;
+    border-radius: 0.5em;
+    color: black;
+    text-decoration: none;
+}
+
+nav img {
+    display: none;
+}
+
+#menu {
+    display: flex;
+    position: fixed;
+    top:10vh;
+    right: 0;
+    background: white;
+    flex-direction: column;
+}
+
+#map {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+svg#taiwan {
+    margin: auto;
+}
+
+svg path {
+    stroke: rgb(0, 0, 0);
+    fill: green;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+svg path:hover {
+    fill: #DAA520;
+    transform: translate(-5px, -5px);
+}
+
+svg path:hover ::after {
+    content: 'OAO';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    display: inline-block;
+    background: black;
+    color: white;
+    z-index: 10000;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+article {
+    display: flex;
+    padding-top:10vh;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+article div.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 20px;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+article div.card {
+    display:block;
+    background:white;
+    width:20%;
+    padding:20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+article div.card img {
+    width: 100%;
+}
+
+article div.container div.profile {
+    flex: 2;
+}
+
+@media (max-width:800px) {
+    nav a {
+        display: none;
+    }
+    nav img {
+        display: block;
+        width: 10vh;
+        height: 10vh;
+    }
+    article div.card {
+        width:100%;
+    }
+}
+
+#upload {
+    position: fixed;
+    width:20vw;
+    right: 5vw;
+    bottom: 5vw;
+}
