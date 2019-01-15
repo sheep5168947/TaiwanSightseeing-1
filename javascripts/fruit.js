@@ -9,9 +9,9 @@ db.ref('/fruit/').on('value',ss=>{
     card.innerHTML = `
       <img src="${data[i].image}" alt="">
 			<h3>${data[i].title}</h3>
-			<div>價格 ${data[i].price}</div>
+			<div>價格 NT$ ${data[i].price} 起</div>
 			<div>產地 ${data[i].origin}</div>
-			<div>檢驗報告 <a href="${data[i].report}">點此查看</a></div>
+			<div>聯絡資訊 ${data[i].contact}</div>
     `
     article.append(card)
   }
