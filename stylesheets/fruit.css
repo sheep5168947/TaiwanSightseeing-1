@@ -195,14 +195,16 @@ article div.container {
 article div.card {
     display:block;
     background:white;
-    width:20%;
+    width:20vw;
     padding:20px;
     border-radius: 10px;
     margin: 20px;
 }
 
 article div.card img {
-    width: 100%;
+    object-fit: cover;
+    height: 15vw;
+    width: 20vw;
 }
 
 article div.container div.profile {
@@ -220,6 +222,11 @@ article div.container div.profile {
     }
     article div.card {
         width:100%;
+    }
+    article div.card img {
+        object-fit: cover;
+        height: 60vw;
+        width: 80vw;
     }
 }
 
