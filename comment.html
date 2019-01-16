@@ -6,8 +6,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="./stylesheets/fruit.css">
+	<link rel="stylesheet" href="./stylesheets/comment.css">
+	<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyBq-sReHlA33BI9Q2zwVGmQblMvicq15Vw",
+			authDomain: "webp-final.firebaseapp.com",
+			databaseURL: "https://webp-final.firebaseio.com",
+			projectId: "webp-final",
+			storageBucket: "",
+			messagingSenderId: "157244466517"
+		};
+		firebase.initializeApp(config);
+		var db = firebase.database()
+	</script>
 	<script src="./javascripts/nav.js" defer></script>
+	<script src="./javascripts/comment.js" defer></script>
 	<title>台灣景點介紹</title>
 </head>
 
@@ -22,32 +37,37 @@
 				<div class="text"></div>
 			</div>
 			<div class="article">
-					<div class="text"></div>
+				<div class="text"></div>
 				<img src="" alt="這裡應該要是圖片">
 			</div>
 		</div>
 	</div>
 	<nav>
-      <div id="logo">認識台灣</div>
-      <div id="buttons">
-        <a href="./index.html">首頁</a>
-        <a href="./about.html">關於我們</a>
-        <a href="./fruit.html">小農水果</a>
-        <a href="./link.html">好站連結</a>
-        <a href="./comment.html">留言板</a>
-      </div>
-      <img src="https://www.blackheron.co.uk/menugate.png" id="mobile-menu"></img>
-    </nav>
-    <div id="menu" hidden>
-        <a href="./index.html">首頁</a>
-        <a href="./about.html">關於我們</a>
-        <a href="./fruit.html">小農水果</a>
-        <a href="./link.html">好站連結</a>
-        <a href="./comment.html">留言板</a>
+		<div id="logo">認識台灣</div>
+		<div id="buttons">
+			<a href="./index.html">首頁</a>
+			<a href="./about.html">關於我們</a>
+			<a href="./fruit.html">小農水果</a>
+			<a href="./comment.html">留言板</a>
 		</div>
-		<article>
+		<img src="https://www.blackheron.co.uk/menugate.png" id="mobile-menu"></img>
+	</nav>
+	<div id="menu" hidden>
+		<a href="./index.html">首頁</a>
+		<a href="./about.html">關於我們</a>
+		<a href="./fruit.html">小農水果</a>
+		<a href="./comment.html">留言板</a>
+	</div>
+	<article>
+		<div class="container">
 			<h1>給我們一些建議或想對我們說的話吧</h1>
-		</article>
+			<div class="board">
+			</div>
+			<input type="text" name="name" id="name" placeholder="名字">
+			<textarea name="talk" id="talk" rows="3" placeholder="講些話吧"></textarea>
+			<button id="submit">送出</button>
+		</div>
+	</article>
 </body>
 
 </html>
