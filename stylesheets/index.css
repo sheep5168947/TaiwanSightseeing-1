@@ -38,6 +38,11 @@ body {
     font-size: 1.5em;
 }
 
+#city_txt {
+    display:block;
+    text-align: center;
+}
+
 #close {
     display: inline-flex;
     position: fixed;
