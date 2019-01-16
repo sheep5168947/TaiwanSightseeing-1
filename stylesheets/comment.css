@@ -173,6 +173,7 @@ svg path:hover ::after {
 article {
     display: flex;
     padding-top:10vh;
+    height: 90vh;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
@@ -180,44 +181,26 @@ article {
 
 article div.container {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-flow: column;
     width: 70%;
+    height: 70vh;
     padding: 20px;
-    margin: 20px 0;
-}
-@keyframes slowout{
-    from{
-    margin-top:100%; 
-}
-to{
-    margin-top:20px;
-}
+    margin: 5vh 0;
+    background: rgba(255, 255, 255, 0.9);
 }
 
-article div.card {
-    display:block;
-    background:white;
-    width:20vw;
-    padding:20px;
-    border-radius: 10px;
-    margin: 20px;
-    animation-name: slowout;
-    animation-duration: 3s; 
-    background-color: rgba(255, 255, 255, 0.75);
+article div.container div.board {
+    height: 50%;
+    overflow-y: scroll;
 }
 
-article div.card img {
-    object-fit: cover;
-    border-radius:30px;
-    height: 15vw;
-    width: 20vw;
+article div.container input , article div.container textarea, article div.container button {
+    margin:10px;
 }
-
-article div.container div.profile {
-    flex: 2;
+article div.container button {
+    height: 3em;
 }
-
 @media (max-width:800px) {
     nav a {
         display: none;
@@ -235,11 +218,4 @@ article div.container div.profile {
         height: 60vw;
         width: 80vw;
     }
-}
-
-#upload {
-    position: fixed;
-    width:100px;
-    right: 5vw;
-    bottom: 5vw;
 }
