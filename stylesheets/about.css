@@ -226,3 +226,8 @@ article div.container div.profile {
         margin-top: 20px;
     }
 }
+.img img{
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+}
