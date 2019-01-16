@@ -191,6 +191,14 @@ article div.container {
     margin: 20px 0;
     background: rgba(255, 255, 255, 0.9);
 }
+@keyframes slowout{
+    from{
+    margin-top:100%; 
+}
+to{
+    margin-top:20px;
+}
+}
 
 article div.card {
     display:block;
@@ -199,6 +207,8 @@ article div.card {
     padding:20px;
     border-radius: 10px;
     margin: 20px;
+    animation-name: slowout;
+    animation-duration: 3s; 
 }
 
 article div.card img {

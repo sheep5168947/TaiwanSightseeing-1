@@ -212,3 +212,15 @@ article div.container div.profile {
         height: 10vh;
     }
 }
+.container{
+    animation-name:slowout;
+    animation-duration:2s;
+}
+@keyframes slowout{
+    from{
+        margin-top:100%;
+    }
+    to{
+        margin-top: 20px;
+    }
+}
